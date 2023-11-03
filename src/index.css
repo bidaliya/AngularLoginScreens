@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish&display=swap');
+
+@font-face {
+    font-family: 'aeonik-bold';
+    src: url('/assets/font/AeonikTRIAL-Bold.otf');
+    font-weight: 100;
+  }
+@font-face {
+    font-family: 'aeonik-regular';
+    src: url('/assets/font/AeonikTRIAL-Regular.otf');
+  }
+    *, *::before, *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font: 'Montserrat';
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+    }
+    :root{
+        --myfont : 'aeonik-regular';
+        --my-btn-font : 'Montserrat';
+        --lg-lightcolor: linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159,172, 230, 0));
+
+        --lg-color :linear-gradient(to left, #74ebd5, #9face6)
+    }
+
+    body{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        font-family: var(--myfont);
+        display: flex;
+        min-height: 100vh;
+        width: 100vw;
+        /* background-color: beige; */
+    }
+
+    .google-signIn:hover, .facebook-signIn:hover{
+        cursor: pointer;
+    }
+
+    .password-input i:hover{
+        cursor: pointer;
+    }
+    .forgotPassword, .login-btn:hover{
+        cursor: pointer;
+    }
+
+    .imgAnimate{
+        /* transition: 0.6s ease;
+        animation:  imageRotateAnimation ;
+        animation-delay: 3s ;
+        animation-duration: infinite; */
+        /* background-color: red; */
+        animation: rotation 2s 1s linear;
+
+    }
+
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+          
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+/* @keyframes imageRotateAnimation {
+    0%{
+        transform: rotate(180deg);
+        transform: scale(1.4);
+        background-color: red;
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+    
+} */
