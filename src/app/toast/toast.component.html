@@ -1,0 +1,13 @@
+<div aria-live="polite" aria-atomic="true" class="toast-container">
+    <ngb-toast
+      *ngFor="let toast of toastService.toasts"
+      class="p-2 Toast border-0"
+      [ngStyle]="{'background-color': toast.color}"
+      [autohide]="true"
+      [delay]="toast.delay || 2000"
+      (hide)="toastService.remove(toast)">
+      {{ toast.textOrTpl }}
+    </ngb-toast>
+  </div>
+
+  <!-- [class]="toast.classname" -->

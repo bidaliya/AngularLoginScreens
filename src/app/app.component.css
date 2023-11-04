@@ -1,0 +1,28 @@
+
+:root{
+
+}
+
+.black-border{
+    border: 1px solid black;
+}.red-border{
+    border: 1px solid red;
+}.green-border{
+    border: 1px solid green;
+}.blue-border{
+    border: 1px solid blue;
+}
+
+.center{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media{
+    background-color: #E3E8EC;
+}
+.simple-input{}
+.facebook-signIn{
+
+}
