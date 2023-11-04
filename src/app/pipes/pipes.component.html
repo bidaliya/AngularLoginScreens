@@ -1,0 +1,20 @@
+<div class="name-input">
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)] = "nameEntered">
+    <span>{{nameEntered | titlecase}}</span>
+</div>
+<div class="date-input">
+    <label for="date"></label>
+</div>
+
+<!--! you need to add the material picker module in the app.module and then add the material date adapter to   -->
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)"  [(ngModel)]="selectedMomentDate" placeholder="Choose a date">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<!--! Date PIPE   -->
+<span>{{selectedDate | date }}</span>
