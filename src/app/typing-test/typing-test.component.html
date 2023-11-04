@@ -4,6 +4,7 @@
     [ngClass]="{'text-dark': !enteredText[i], 'text-success': enteredText[i] == char, 'text-danger': enteredText[i] != char }"
     *ngFor="let char of displayText.split(''); let i = index">{{char}}</span>
 </p>
+<!--! ngModel is used when we use Forms Module in app.module  -->
 <input type="text" class="w-100 h-20" [(ngModel)] = 'enteredText' >
 <p *ngIf="displayText == enteredText && displayText.length == enteredText.length" class="text-success text-center ">You Win!</p>
 <p *ngIf="displayText != enteredText &&displayText.length == enteredText.length" class="text-danger text-center">Loose!</p>
