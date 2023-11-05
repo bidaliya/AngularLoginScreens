@@ -1,7 +1,7 @@
-<div class="main d-flex container-fluid vh-100 p-5" style="background-color: #E3E8EC;"  >
+<div class="main d-flex container-fluid vh-100 " style="background-color: #E3E8EC; padding: 80px 100px;"  >
   <app-toast></app-toast>
 
-  <div class="row w-100" style="border: 1px solid;">
+  <div class="row w-100" style="">
 
     <div class="col-6 bg-white d-flex align-items-center" style="padding: 0px 150px;" >
       
@@ -14,7 +14,8 @@
 
         <!--!Hello again  -->
         <div class="d-flex justify-content-center align-items-center gap-1" style="font-family: 'PT Serif', serif;">
-          <span style="font-size: 20px;">Hello Again</span>
+          <!-- appCustomDirective [backgroundColor]="'orange'"  -->
+          <span [appCustomDirective] = "'orange'" style="font-size: 20px;">Hello Again</span>
           <div class="" style="width: 30px; height: 30px;">
             <img style="object-fit: contain; width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Emoji_u1f44b.svg/2048px-Emoji_u1f44b.svg.png">
           </div>
@@ -70,12 +71,11 @@
       
     </div>
 
+    <div class="col-6 h-100 pe-0" style="background-color: #FFFFFF; " >
 
-    <div class="col-6 h-100 pe-0" style="background-color: #FFFFFF;" >
-
-      <div class="me-0" style="width: 100%; height: 100;">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 100%;">
-          <div class="carousel-inner" style="width: 100%; height: 100%;">
+      <div class="me-0 col-6 h-100 pe-0" style="width: 100%; height: 100%; ">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 100%; ">
+          <div class="carousel-inner" style="width: 100%; height: 100%; border-radius: 20px 0px 0px 20px;">
             <div class="carousel-item active" style="width: 100%; height: 100%;">
               <img src="../assets/images/Frame 2609499.png" class="d-block w-100 h-100" alt="..." style="object-fit: fill;">
             </div>
@@ -103,3 +103,9 @@
 
  <app-typing-test></app-typing-test>
  <app-pipes></app-pipes>
+ <app-directives></app-directives>
+
+ <!--! use of custom structural directive  -->
+ <ul *appCustomStructuralDirective="5; let i = index; let c = color">
+  <li>Hi there {{i}}&nbsp; {{c}}</li>
+ </ul>

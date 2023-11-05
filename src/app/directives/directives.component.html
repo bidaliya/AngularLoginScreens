@@ -1,0 +1,29 @@
+<!-- <nav aria-label="">
+    <ul class="pagination">
+        <li class="page-item" (click)="currentPage = currentPage - 1" [ngClass]="{'disabled':currentPage == 0}"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+        <ng-container *ngFor="let item of imagesArray; let i = index;" >
+            <li class="page-item " 
+                *ngIf="checkPage(i)" 
+                [ngClass]="{'active':i==currentPage}" 
+                (click) = "currentPage = i"
+                >
+                <a class="page-link" href="#">{{i+1}}</a>
+            </li>
+        </ng-container>
+      <li class="page-item" (click)=" currentPage =  currentPage + 1" [ngClass]="{'disabled':currentPage == imagesArray.length-1}"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav> -->
+
+<mat-paginator [length]="imagesArray.length"
+    [pageSize]="5"
+    [pageSizeOptions]="[1,5, 10, 25, 100]"
+    aria-label="Select page"
+    (page)="currentPage = $event.pageIndex">
+</mat-paginator>
+<div class="show-item" style="border: 1px solid; width: 300px; aspect-ratio: 1/1;">
+    
+    <div class="img w-100 h-100" >
+        <img [src]="imagesArray[currentPage].imageURL" class="w-100 h-100" style="object-fit: cover;">
+    </div>
+
+</div>
